@@ -5,9 +5,9 @@
     align-items: center;
     justify-content: flex-start;
     /* Cambiado para iniciar desde la parte superior */
-    min-height: 100vh;
+    height: 100%;
     padding: 20px;
-    width: 100%;
+    width: 100%;    
 }
 
 /* Estilo del título */

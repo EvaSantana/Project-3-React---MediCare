@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import "./formulario.css"
+import { Link } from 'react-router-dom'; 
 
 function FormularioCrearUsuario() {
     const [formData, setFormData] = useState({
@@ -124,7 +125,8 @@ function FormularioCrearUsuario() {
                 </div>
                 <br/>
                 
-                <button type="submit" className="submit-button">Crear cuenta</button>
+                <button type="submit" className="submit-button"> <Link to='/patient'><p>Crear cuenta</p></Link> </button> {/* aqui linkear a vista PatientView */}
+               
 
             </form>
         </div>

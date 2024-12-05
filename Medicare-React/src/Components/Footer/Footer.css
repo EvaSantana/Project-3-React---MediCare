@@ -8,6 +8,8 @@
     font-size: 12px;
     /* Reduce el tamaño de la fuente */
     display: flex;
+    position: relative;
+    bottom: 0px;
     flex-direction: column;
     align-items: center;
 }

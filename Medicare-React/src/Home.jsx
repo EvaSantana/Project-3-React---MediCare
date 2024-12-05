@@ -7,7 +7,7 @@ function Home() {
   const [showLogin, setShowLogin] = useState(false);
 
   const specialities = [
-    { name: "Endocrino", image: "/endocriono.png" },
+    { name: "Endocrinología", image: "/endocriono.png" },
     { name: "Ginecología", image: "/ginecologo.png" },
     { name: "Oftalmología", image: "/Oftalmologo.png" },
     { name: "Traumatología", image: "/tramatologia.png" },

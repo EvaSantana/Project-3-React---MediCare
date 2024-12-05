@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import Sidebar from '../../Components/PatientViewComponents/sidebar';
 import MainContent from '../../Components/PatientViewComponents/cards';
-import Navbar from '../../Components/PatientViewComponents/header2';
+import Header2 from '../../Components/PatientViewComponents/header2';
+import Header from '../../Components/Header/Header';
+import Footer from '../../Components/Footer/Footer';
+import './PatientView.css' 
 
 
 function PatientView() {
@@ -14,9 +17,14 @@ function PatientView() {
   return (
     <>
       <div className="container">
-        <Navbar />
-        <Sidebar onMenuClick={handleMenuClick} />
-        <MainContent activeSection={activeSection} />
+        <Header />
+        <Header2 />
+        <div className="patientViewBody">
+          <Sidebar onMenuClick={handleMenuClick} />
+          <MainContent activeSection={activeSection} />
+        </div>
+        <div className="footerPatientView"><Footer /></div>
+
       </div>
     </>
   );

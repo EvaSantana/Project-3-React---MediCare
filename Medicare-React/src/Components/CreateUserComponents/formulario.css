@@ -79,6 +79,15 @@
     cursor: pointer;
 }
 
+.submit-button p {
+    color: white;
+    text-decoration: none;
+}
+
+.submit-button a {
+    text-decoration: none;
+}
+
 .submit-button:hover {
     background-color: #014A73;
     /* Oscurecer al pasar el mouse */

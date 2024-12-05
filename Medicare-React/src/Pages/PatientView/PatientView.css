@@ -4,6 +4,37 @@
     box-sizing: border-box;
 }
 
-.container {
+.patientViewBody {
     display: flex;
+    /* Alinea los hijos en fila (uno al lado del otro) */
+    width: 100%;
+    /* Ocupa el ancho completo */
+    height: calc(100vh - 150px);
+    /* Ajusta la altura restante (150px son ejemplo para headers/footers) */
+}
+
+.sidebar {
+    flex: 0 0 30%;
+    /* Ocupa el 30% del ancho */
+    background-color: #f5f5f5;
+    /* Color de fondo (opcional) */
+    border-right: 1px solid #ccc;
+    /* Separador visual (opcional) */
+}
+
+.main-content {
+    flex: 1;
+    /* Ocupa el resto del espacio (70%) */
+    padding: 20px;
+    /* Espaciado interno */
+    background-color: #ffffff;
+    /* Color de fondo (opcional) */
+}
+
+.footerPatientView {
+    width: 100vw;
+}
+
+h1 {
+    color:black;
 }

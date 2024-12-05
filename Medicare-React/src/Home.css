@@ -5,6 +5,10 @@ body {
     color: #fff;
 }
 
+html {
+    height: auto;
+}
+
 .app-container {
     width: 100%;
     display: flex;

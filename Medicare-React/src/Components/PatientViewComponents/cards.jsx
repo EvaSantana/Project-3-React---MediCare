@@ -29,7 +29,7 @@ function MainContent({ activeSection }) {
 
                     // Cargar especialidades
                     const doctorsResponse = await getAllDoctors();
-                    
+
                     setEspecialidades(() => {
                         let arr = doctorsResponse?.map((doctor) => {
                             return doctor.especialidad
@@ -43,6 +43,7 @@ function MainContent({ activeSection }) {
                     setData(medicamentosResponse);
                 } else if (activeSection === 'recetas') {
                     const recetasResponse = await getAllPrescriptions();
+                    console.log(recetasResponse)
                     setData(recetasResponse);
                 }
             } catch (error) {
@@ -104,7 +105,7 @@ function MainContent({ activeSection }) {
                             <li key={index} className="card">
                                 <p><strong>Fecha:</strong> {cita.fecha}</p>
                                 <p><strong>Hora:</strong> {cita.hora}</p>
-                                <p><strong>Especialidad:</strong> {cita.doctor}</p>
+                                <p><strong>Especialidad:</strong> {cita.especialidad}</p>
                             </li>
                         ))}
                     </ul>
@@ -122,7 +123,7 @@ function MainContent({ activeSection }) {
                         >
                             <option value="">--Selecciona una especialidad--</option>
                             {
-                               especialidades?.map((especialidad, index) => {
+                                especialidades?.map((especialidad, index) => {
                                     return (<option key={index} value={especialidad}>
                                         {especialidad}
                                     </option>)
@@ -167,8 +168,8 @@ function MainContent({ activeSection }) {
                     {data.map((medicamento, index) => (
                         <li key={index} className="card">
                             <p><strong>Nombre del medicamento:</strong> {medicamento.nombre}</p>
-                            <p><strong>Frecuencia:</strong> {medicamento.frecuencia}</p>
-                            <p><strong>Dosis:</strong> {medicamento.dosis}</p>
+                            <p><strong>Efectos Secundarios:</strong> {medicamento.efectoSecundario}</p>
+                            <p><strong>Tipo:</strong> {medicamento.tipo}</p>
                         </li>
                     ))}
                 </ul>
@@ -179,6 +180,7 @@ function MainContent({ activeSection }) {
                 <ul>
                     {data.map((receta, index) => (
                         <li key={index} className="card">
+                            <p><strong>Nombre:</strong> {receta.nombre}</p>
                             <p><strong>Descripción:</strong> {receta.descripcion}</p>
                             <p><strong>Fecha:</strong> {receta.fecha}</p>
                         </li>
@@ -189,4 +191,4 @@ function MainContent({ activeSection }) {
     );
 }
 
-export default MainContent;
+export default MainContent;;

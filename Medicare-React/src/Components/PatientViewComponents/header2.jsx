@@ -2,7 +2,7 @@ import React from 'react';
 import IconUser from './iconUser';
 import './header2.css';
 
-function Navbar() {
+function Header2() {
     return (
         <nav className="navbar">
             <div className="user">USUARIO</div>
@@ -13,6 +13,6 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default Header2;
 
 
