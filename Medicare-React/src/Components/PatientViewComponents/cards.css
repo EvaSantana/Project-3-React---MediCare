@@ -14,7 +14,11 @@
 .activeSection h1 {
     color: #ffffff;
     font-size: 2rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 6px rgba(51, 49, 49, 0.6),
+        0 -2px 6px rgba(51, 49, 49, 0.6),
+        0 2px 6px rgba(51, 49, 49, 0.6),
+        -2px 0 6px rgba(51, 49, 49, 0.6),
+        2px 0 6px rgba(51, 49, 49, 0.6);
     margin-bottom: 20px;
     text-align: center;
 }

@@ -14,12 +14,13 @@
 }
 
 .sidebar {
-    flex: 0 0 30%;
+    flex: 0 0 20%;
     /* Ocupa el 30% del ancho */
     background-color: #f5f5f5;
     /* Color de fondo (opcional) */
     border-right: 1px solid #ccc;
     /* Separador visual (opcional) */
+    padding-top: 40px;
 }
 
 .main-content {

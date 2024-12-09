@@ -7,7 +7,7 @@ function Home() {
   const [showLogin, setShowLogin] = useState(false);
 
   const specialities = [
-    { name: "Endocrinología", image: "/endocriono.png" },
+    { name: "Endocrinología", image: "/Endocrino.png" },
     { name: "Ginecología", image: "/ginecologo.png" },
     { name: "Oftalmología", image: "/Oftalmologo.png" },
     { name: "Traumatología", image: "/tramatologia.png" },
@@ -32,7 +32,7 @@ function Home() {
       <div className="banner">
         <img src="../public/banner_pic.jpg" className="banner-image" />
         <h1 className="banner-text">
-          Explicación de <br /> funcionalidad de la web
+          En MediCare la salud es nuestra prioridad. <br /> Encuentra la especialidad que busques<br /> y solicita cita de forma <br />  rapida y sencilla.
         </h1>
       </div>
 

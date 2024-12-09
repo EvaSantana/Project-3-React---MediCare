@@ -101,13 +101,20 @@ function MainContent({ activeSection }) {
             {activeSection === 'citas' && (
                 <>
                     <ul>
-                        {citas?.map((cita, index) => (
-                            <li key={index} className="card">
-                                <p><strong>Fecha:</strong> {cita.fecha}</p>
-                                <p><strong>Hora:</strong> {cita.hora}</p>
-                                <p><strong>Especialidad:</strong> {cita.especialidad}</p>
-                            </li>
-                        ))}
+                        {citas?.map((cita, index) => {
+                            if (index < 3) {
+                                const especialidadCita = ["Oncología", "Pediatría", "Neumología"]
+                                return (<li key={index} className="card">
+                                    <p><strong>Fecha:</strong> {cita.fecha}</p>
+                                    <p><strong>Hora:</strong> {cita.hora}</p>
+                                    {/* <p><strong>Estado:</strong> {cita.estado}</p> */}
+                                    <p><strong>Especialidad:</strong> {especialidadCita[index]}</p>
+                                </li>) 
+                            }
+
+                        }
+
+                        )}
                     </ul>
 
                     {/* Mostrar el calendario */}
@@ -165,26 +172,36 @@ function MainContent({ activeSection }) {
             {/* Renderizado para Medicamentos */}
             {activeSection === 'medicamentos' && (
                 <ul>
-                    {data.map((medicamento, index) => (
-                        <li key={index} className="card">
-                            <p><strong>Nombre del medicamento:</strong> {medicamento.nombre}</p>
-                            <p><strong>Efectos Secundarios:</strong> {medicamento.efectoSecundario}</p>
-                            <p><strong>Tipo:</strong> {medicamento.tipo}</p>
-                        </li>
-                    ))}
+                    {data.map((medicamento, index) => {
+                        if (index < 5) {
+                            return (
+                                <li key={index} className="card">
+                                    <p><strong>Nombre del medicamento:</strong> {medicamento.nombre}</p>
+                                    <p><strong>Efectos Secundarios:</strong> {medicamento.efectoSecundario}</p>
+                                    <p><strong>Tipo:</strong> {medicamento.tipo}</p>
+                                </li>
+                            );
+                        }
+                    })}
+
                 </ul>
             )}
 
             {/* Renderizado para Recetas */}
             {activeSection === 'recetas' && (
                 <ul>
-                    {data.map((receta, index) => (
-                        <li key={index} className="card">
-                            <p><strong>Nombre:</strong> {receta.nombre}</p>
-                            <p><strong>Descripción:</strong> {receta.descripcion}</p>
-                            <p><strong>Fecha:</strong> {receta.fecha}</p>
-                        </li>
-                    ))}
+                    {data.map((receta, index) => {
+                        if (index < 4) {
+                            return (
+                                <li key={index} className="card">
+                                    <p><strong>Nombre:</strong> {receta.nombre}</p>
+                                    <p><strong>Descripción:</strong> {receta.descripcion}</p>
+                                    <p><strong>Fecha:</strong> {receta.fecha}</p>
+                                </li>
+                            );
+                        }
+                    })}
+
                 </ul>
             )}
         </div>

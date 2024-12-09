@@ -33,7 +33,23 @@ const getOnePatient = async (id) => {
     }
 };
 
+const createPatientByDoctor = async (medicoID, patientData) => {
+    try {
+        const { data } = await api.post(`/doctors/${medicoID}/patients`, patientData, {
+            headers: {
+                Authorization: localStorage.getItem("token"),
+            },
+        });
+
+        return data;
+    } catch (error) {
+        console.error(`Error al crear un paciente para el médico ${medicoID}:`, error);
+        throw new Error("No se pudo crear el paciente");
+    }
+};
+
 export {
     getAllPatients,
-    getOnePatient
+    getOnePatient,
+    createPatientByDoctor
 }
